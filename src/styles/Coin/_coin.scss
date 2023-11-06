@@ -1,0 +1,245 @@
+@use "../global" as *;
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.coin-page {
+  background-image: linear-gradient(to top, $bg-black 30%, #130749 70%);
+  width: 100%;
+  height: 100vh;
+
+  @media (max-width: 1000px) {
+    height: 150vh;
+  }
+}
+
+.coin-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $color-white;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    padding-top: 33rem;
+  }
+
+  &__img-side {
+    width: 30%;
+    border-right: 2px solid $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    @media (max-width: 1000px) {
+      width: 90%;
+    }
+
+    @media (max-width: 1000px) {
+      border-bottom: 2px solid $color-white;
+      border-right: none;
+      padding-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 3.3rem;
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    img {
+      width: 22rem;
+      height: 22rem;
+    }
+  }
+
+  &__text-side {
+    width: 70%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+      padding: 2rem 1rem;
+    }
+
+    &__24h,
+    &__current,
+    &__symbol {
+      display: flex;
+      font-size: $text-normal;
+      gap: 1rem;
+      justify-content: center;
+      white-space: nowrap;
+
+      p {
+        span {
+          color: $color-white;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.numb {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 1000px) {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+}
+
+.description {
+  width: 100%;
+  font-size: 2rem;
+  height: 30rem;
+  overflow-y: auto;
+  margin-top: 4rem;
+  text-align: left;
+
+  a {
+    color: $green;
+  }
+}
+
+* {
+  font-family: 'Lato', sans-serif !important;
+}
+
+a.cryptocompare-logo {
+  display: none;
+}
+
+.tabcontent {
+  display: none !important;
+}
+
+.cTypeTabActive {
+  background-color: rgba(216, 216, 216, 0.8) !important;
+}
+
+.tabperiods {
+  font-family: 'Raleway', sans-serif;
+  border-radius: 7px;
+  padding: 2px 1px;
+  background-color: rgba(0, 0, 0, 0.03);
+
+  &:hover {
+    background-color: rgb(231, 240, 249);
+  }
+}
+
+.tabperiods_active {
+  background-color: rgba(10, 115, 167, 0.1);
+}
+
+.tablinks {
+  border-radius: 7px;
+  border-width: 1px;
+  padding: 5px 10px;
+  border-style: solid;
+  background-color: #ffffff;
+  border-color: rgb(255, 255, 255) !important;
+
+  &:hover {
+    background-color: #f2f2f2;
+    border-color: rgba(127, 211, 179, 0.8);
+  }
+
+  &.active {
+    border-color: rgba(255, 255, 255, 0.01) !important;
+    background-color: #e6e6e6 !important;
+  }
+}
+
+.amcharts-graph-line {
+  fill: rgba(255, 255, 255, 0.9);
+}
+
+.cccCustomRadioContainer {
+  display: none;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.ccc-widget,
+.ccc-chart-v3 {
+  border: 0px solid !important;
+}
+
+tspan,
+textPath {
+  font-size: 0.8rem;
+}
+
+rect.amcharts-cursor-div {
+  background-color: #000000;
+}
+
+.chartTypeTabLinks {
+  padding-top: 1px;
+  padding-bottom: 1px;
+
+  &:hover {
+    background-color: #e5e5e5 !important;
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
+}
+
+.amcharts-graph-fill {
+  fill: rgb(139, 146, 167) !important;
+  fill-opacity: 0.2;
+}
+
+.amcharts-graph-stroke {
+  fill-opacity: 0.8;
+  stroke-width: 2;
+  stroke-opacity: 0.8;
+  stroke: rgb(125, 149, 182);
+}
+
+.amcharts-category-axis {
+  fill: rgba(0, 0, 0, 0.8) !important;
+}
+
+.amcharts-cursor-fill {
+  fill: rgba(10, 115, 167, 0.8);
+  stroke: rgb(4, 0, 0) !important;
+  display: none !important;
+}
+
+.amcharts-plot-area {
+  fill: rgb(25, 225, 225) !important;
+}
+
+.amcharts-legend-marker {
+  fill: rgba(10, 115, 167, 0.3) !important;
+  stroke: rgba(10, 115, 167, 0.6) !important;
+}
+
+.amcharts-balloon-div {
+  fill: rgba(10, 115, 167, 0.9) !important;
+  position: absolute !important;
+  border: 1px !important;
+}
+
+#loaderccc {
+  display: none !important;
+}
